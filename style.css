@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    /*párrafos*/
+    --TransparentWhite : hsla(0, 0%, 100%, 0.75);
+    /*(background, headings, buttons)*/
+    --VeryLightGray : hsl(0, 0%, 95%);
+}
+body {
+    font-size : 15px;
+    background-color: var(--VeryLightGray);
+}
+/*
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+main{
+    display: flex;    
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 100px;
+    flex-direction: column;
+    
+}
+figure {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--VeryLightGray);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color : var(--TransparentWhite);
+    margin-bottom: 20px;
+    line-height: 2rem;
+    font-size: 16px;
+}
+.btns{
+    background-color: var(--VeryLightGray);
+    font-weight: bold;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: solid 1px var(--VeryLightGray);
+}
+.btn-sedans {
+    color: var(--BrightOrange);
+}
+.btns-suvs{
+    color : var(--DarkCyan)
+}
+.btns-luxury{
+    color : var(--VeryDarkCyan);
+
+}
+.btns:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--VeryLightGray);
+}
+.contents {
+    min-width: 320px;
+    padding: 50px;
+    max-width: 350px;
+    margin: 0 auto;
+    
+}
+.content-sedans{
+    background-color: var(--BrightOrange);
+    border-radius: 15px 15px 0px 0px;
+}
+.content-suvs{
+    background-color: var(--DarkCyan);
+}
+.content-luxury{
+    background-color: var(--VeryDarkCyan);
+    border-radius: 0px 0px 15px 15px;
+}
+
+@media screen and (min-width: 1440px) {
+    main{
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+
+    }
+    .contents {
+        margin: 0px;
+        height: 500px;
+    }
+    .content-sedans {
+        border-radius: 15px 0px 0px 15px;
+    }
+    .content-luxury {
+        border-radius: 0px 15px 15px 0px;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        margin-bottom: 62px;
+    }
+}
